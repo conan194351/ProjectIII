@@ -16,7 +16,7 @@ import pickle
 Categories=['cats','dogs']
 flat_data_arr=[] #input array
 target_arr=[] #output array
-datadir='dataset/test_set' 
+datadir='training_set' 
 #path which contains all the categories of images
 for i in Categories:
       

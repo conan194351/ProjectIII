@@ -1,0 +1,12 @@
+[
+    {
+        "name": "cats",
+        "id": 0,
+        "data_dir": "./training_set/cats"
+    },
+    {
+        "name": "dogs",
+        "id": 1,
+        "data_dir": "./training_set/dogs"
+    }
+]
