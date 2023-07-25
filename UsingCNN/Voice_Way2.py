@@ -39,12 +39,10 @@ with open('./npy_label.csv', 'w', newline='') as csvfile:
         for folder in folders:
             ss = folder['name']
             print(ss)
-            list_files =os.listdir(folder['data_dir'])
+            list_files =os.listdir(folder['training_set'])
             for k in range (0,len(list_files)):
                 file_name =  str(list_files[k])
-
-                
-                full_name_wav = folder['data_dir'] +'/'+ file_name
+                full_name_wav = folder['training_set'] +'/'+ file_name
                 print (full_name_wav)
                 y, sr = librosa.load(full_name_wav, mono=True, offset=0, duration=(timeseries_length - 1) * hlength / sr, sr=sr)
                 y = 0.1 * y * 10.0
