@@ -48,7 +48,7 @@ with open('./npy_label.csv', 'w', newline='') as csvfile:
                 try:
                     pet_img= cv2.resize(pet_img,(50,50))
                     image = np.array(pet_img).flatten()
-                    data = [image, folder['name']]
+                    data = image
                 except Exception as e:
                     pass
                 file_name_npy = '{}-{}.npy'.format(folder['id'],k)
@@ -57,4 +57,4 @@ with open('./npy_label.csv', 'w', newline='') as csvfile:
                 # print (full_name_npy)
                 csv_writer.writerow([file_name_npy,folder['name']])
                 with open(full_name_npy, "wb") as f:
-                    np.save(f, data)
+                    np.save(full_name_npy, ss)

@@ -10,7 +10,7 @@ lrdecay = str(0.975)
 # subprocess.check_call([sys.executable, 'Test_CNN_VoiceID.py','--fold',"CRV1",'--lr_decay',lrdecay])
 # #
 print ("CRV2=====================Training and Test")
-subprocess.check_call([sys.executable, 'Training_kFold_CNN_VoiceID.py','--fold',"CRV2",'--lr_decay',lrdecay])
+subprocess.check_call([sys.executable, 'Training.py','--fold',"CRV2",'--lr_decay',lrdecay])
 # subprocess.check_call([sys.executable, 'Test_CNN_VoiceID.py','--fold',"CRV2",'--lr_decay',lrdecay])
 
 # print ("CRV3=====================Training and Test")
