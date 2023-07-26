@@ -8,10 +8,8 @@ with open('model.sav', 'rb') as model_file:
     model = pickle.load(model_file)
 Categories = ['cats', 'dogs']
 # Đường dẫn tới ảnh mới bạn muốn dự đoán nhãn
-path = 'dataset/test_set/dogs/dog.4001.jpg'
+path = 'training_set/dogs/dog.4001.jpg'
 img = imread(path)
-plt.imshow(img)
-plt.show()
 
 # Chuẩn bị ảnh mới và dự đoán nhãn
 img_resize = resize(img, (150, 150, 3))
@@ -24,3 +22,5 @@ for ind, val in enumerate(Categories):
 
 predicted_label = model.predict(l)[0]
 print("The predicted image is:", Categories[predicted_label])
+plt.imshow(img)
+plt.show()

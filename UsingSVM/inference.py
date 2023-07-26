@@ -7,7 +7,7 @@ import random
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 
-dir = "./dataset/training_set"
+dir = "./training_set"
 
 categories = ['cats', 'dogs']
 
@@ -15,6 +15,7 @@ data = []
 
 for category in categories:
     path = os.path.join(dir, category)
+    print(path)
     label = categories.index(category)
 
     for img in os.listdir(path):
@@ -23,16 +24,15 @@ for category in categories:
         try:
             pet_img= cv2.resize(pet_img,(50,50))
             image = np.array(pet_img).flatten()
-
             data.append([image, label])
 
         except Exception as e:
             pass
 
 
-pick_in = open('data1.pickle', 'wb')
-pickle.dump(data, pick_in)
-pick_in.close()
+# pick_in = open('data1.pickle', 'wb')
+# pickle.dump(data, pick_in)
+# pick_in.close()
 
 # pick_in = open('data1.pickle', 'rb')
 # data = pickle.load(pick_in)
