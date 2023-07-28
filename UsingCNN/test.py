@@ -47,7 +47,7 @@ with open('./npy_label.csv', 'w', newline='') as csvfile:
                 pet_img = cv2.imread(full_name_wav, 0)
                 try:
                     pet_img= cv2.resize(pet_img,(50,50))
-                    image = np.array(pet_img).flatten()
+                    image = np.array(pet_img)
                     data = image
                 except Exception as e:
                     pass

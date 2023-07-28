@@ -67,8 +67,8 @@ batch_size = 8
 
 num_epochs = 400
 
-img_rows = 215
-img_cols = 215 
+img_rows = 50
+img_cols = 50 
 
 
 
@@ -141,7 +141,7 @@ for filename in enumerate(file_name):
       break
 
     data[i]   = np.load(full_name)
-    if(data[i].shape !=(215,215)):
+    if(data[i].shape !=(50,50)):
         print(data[i].shape,path)
         exit(0)
     target.append(genre[index])
@@ -177,7 +177,7 @@ for filename in enumerate(file_name):
     # target.append(genre[index])
     # i = i + 1
     data_train[i, :, 0:parameter_number]   = np.load(full_name)
-    if(data_train[i].shape !=(215,215)):
+    if(data_train[i].shape !=(50,50)):
         print(data[i].shape,path)
         exit(0)
     target.append(genre[index])
