@@ -41,6 +41,6 @@ for train_index, test_index in sss.split(X_data_full, Y_data_full):
 
 # Save test and training in CSV format
 df = pd.DataFrame({"file_id" : X_test, "id" : y_test})
-df.to_csv("VOICE_test_data.csv", index=False)
+df.to_csv("IMAGE_test_data.csv", index=False)
 df = pd.DataFrame({"file_id" : X_train, "id" : y_train})
-df.to_csv("VOICE_trainvalid_data.csv", index=False)
+df.to_csv("IMAGE_trainvalid_data.csv", index=False)

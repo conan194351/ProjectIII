@@ -17,7 +17,7 @@ valid_ratio = 0.1    # Testing
 
 
 # For all classes
-data_full = pd.read_csv("VOICE_trainvalid_data.csv", usecols=col_list)
+data_full = pd.read_csv("IMAGE_trainvalid_data.csv", usecols=col_list)
 
 X_data_full = data_full["file_id"]
 Y_data_full = data_full["id"]
@@ -35,7 +35,7 @@ for train_index, test_index in sss.split(X_data_full, Y_data_full):
 
     # Save validation and training in CSV format
     df = pd.DataFrame({"file_id" : X_test, "id" : y_test})
-    df.to_csv("VOICE_valid_data_CRV"+str(i)+".csv", index=False)
+    df.to_csv("IMAGE_valid_data_CRV"+str(i)+".csv", index=False)
     df = pd.DataFrame({"file_id" : X_train, "id" : y_train})
-    df.to_csv("VOICE_train_data_CRV"+str(i)+".csv", index=False)
+    df.to_csv("IMAGE_train_data_CRV"+str(i)+".csv", index=False)
     i=i+1

@@ -89,7 +89,7 @@ def one_hot(Y_genre_strings):
         index = genre_list.index(genre_string)
         y_one_hot[i, index] = 1
     return y_one_hot
-valid_csv = pd.read_csv("VOICE_test_data.csv", usecols=col_list)
+valid_csv = pd.read_csv("IMAGE_test_data.csv", usecols=col_list)
 file_name = valid_csv["file_id"]
 # print (filename[1])
 genre = valid_csv["id"]
@@ -97,7 +97,7 @@ genre = valid_csv["id"]
 print ("Loading test data---------------------")
 file_path = "./npy/"
 parameter_number = 50
-total_file = 1999 # Number of Test Files
+total_file = 1600 # Number of Test Files
 # NFFT = 4096
 timeseries_length = 50
 data = np.zeros(
@@ -241,7 +241,7 @@ axes.figure.savefig(fig_filename1 )
 # sys.exit()
 # NEW ACC
 # cnf_matrix = confusion_matrix(real_labels_frames, predicted_labels_frames)
-file_report = figures_dir+"/"+fold+"_4digits_REPORT_CNN_VoiceID.txt"
+file_report = figures_dir+"/"+fold+"_4digits_REPORT_CNN_ImageID.txt"
 print(metrics.classification_report(real_labels_frames,
                                     predicted_labels_frames,
                                     digits=4), file=open(file_report, "a"))

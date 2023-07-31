@@ -76,7 +76,7 @@ img_cols = 50
 # GTZAN Dataset Tags
 tagstring = [0,1,2,3,4,5]
 tags = np.array(tagstring)
-parser = argparse.ArgumentParser(description="CNN on Training VoiceID.")
+parser = argparse.ArgumentParser(description="CNN on Training ImageID.")
 
 parser.add_argument('--epochs', default=50, type=int)
 parser.add_argument('--batch_size', default=10, type=int)
@@ -110,7 +110,7 @@ data_working_dir = "./" + fold +"/"
 print ("Load validation and training data................")
 file_path = ".//npy/"
 parameter_number = 50
-total_file = 1600
+total_file = 200
 
 timeseries_length = 50
 data = np.zeros(
@@ -125,7 +125,7 @@ def one_hot(Y_genre_strings):
         index = genre_list.index(genre_string)
         y_one_hot[i, index] = 1
     return y_one_hot
-valid_csv = pd.read_csv("VOICE_valid_data_"+ fold +".csv", usecols=col_list)
+valid_csv = pd.read_csv("IMAGE_valid_data_"+ fold +".csv", usecols=col_list)
 file_name = valid_csv["file_id"]
 # print (filename[1])
 genre = valid_csv["id"]
@@ -155,10 +155,10 @@ Y_val = one_hot(Y_val)
 # sys.exit()
 
 # LOAD TRAINING DATA===================================
-total_file_training = 1999 # Number of Train Files
+total_file_training = 1600 # Number of Train Files
 data_train = np.zeros(
     (total_file_training, timeseries_length, parameter_number), dtype=np.float32)
-train_csv = pd.read_csv("VOICE_train_data_"+ fold +".csv", usecols=col_list)
+train_csv = pd.read_csv("IMAGE_train_data_"+ fold +".csv", usecols=col_list)
 file_name = train_csv["file_id"]
 # print (filename[1])
 genre = train_csv["id"]
