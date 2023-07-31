@@ -110,7 +110,7 @@ data_working_dir = "./" + fold +"/"
 print ("Load validation and training data................")
 file_path = ".//npy/"
 parameter_number = 50
-total_file = 29
+total_file = 1600
 
 timeseries_length = 50
 data = np.zeros(
