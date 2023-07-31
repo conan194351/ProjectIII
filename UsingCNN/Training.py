@@ -110,7 +110,7 @@ data_working_dir = "./" + fold +"/"
 print ("Load validation and training data................")
 file_path = ".//npy/"
 parameter_number = 50
-total_file = 81
+total_file = 29
 
 timeseries_length = 50
 data = np.zeros(
@@ -155,7 +155,7 @@ Y_val = one_hot(Y_val)
 # sys.exit()
 
 # LOAD TRAINING DATA===================================
-total_file_training = 641 # Number of Train Files
+total_file_training = 170 # Number of Train Files
 data_train = np.zeros(
     (total_file_training, timeseries_length, parameter_number), dtype=np.float32)
 train_csv = pd.read_csv("VOICE_train_data_"+ fold +".csv", usecols=col_list)
