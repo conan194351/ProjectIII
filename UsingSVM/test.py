@@ -8,7 +8,7 @@ with open('model.sav', 'rb') as model_file:
     model = pickle.load(model_file)
 Categories = ['cats', 'dogs']
 # Đường dẫn tới ảnh mới bạn muốn dự đoán nhãn
-path = 'training_set/dogs/dog.4001.jpg'
+path = 'test/test_5.jpg'
 img = imread(path)
 
 # Chuẩn bị ảnh mới và dự đoán nhãn
