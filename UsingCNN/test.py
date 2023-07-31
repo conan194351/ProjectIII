@@ -38,16 +38,17 @@ with open('./npy_label.csv', 'w', newline='') as csvfile:
 
         for folder in folders:
             ss = folder['name']
-            print(ss)
             list_files =os.listdir(folder['data_dir'])
             for k in range (0,len(list_files)):
                 file_name =  str(list_files[k])
                 full_name_wav = folder['data_dir'] +'/'+ file_name
-                print (full_name_wav)
+
                 pet_img = cv2.imread(full_name_wav, 0)
                 try:
                     pet_img= cv2.resize(pet_img,(50,50))
                     image = np.array(pet_img)
+                    # print(pet_img)
+                    # exit()
                     data = image
                 except Exception as e:
                     pass
@@ -57,4 +58,6 @@ with open('./npy_label.csv', 'w', newline='') as csvfile:
                 # print (full_name_npy)
                 csv_writer.writerow([file_name_npy,folder['name']])
                 with open(full_name_npy, "wb") as f:
-                    np.save(full_name_npy, ss)
+                    np.save(full_name_npy, data)
+                    test=np.load(full_name_npy)
+                    print(test)
