@@ -78,7 +78,7 @@ class DefineModels:
                          ))
         model.add(BatchNormalization(axis=self.channel_axis, name='bn5'))
         model.add(ELU())
-        model.add(MaxPooling2D(pool_size=(3, 3), name='pool5')) # (4,4)
+        model.add(MaxPooling2D(pool_size=(2, 2), name='pool5')) # (4,4)
         model.add(Dropout(self.drop))
         #print (model.output_shape)
 
