@@ -109,10 +109,10 @@ data_working_dir = "./" + fold +"/"
 
 print ("Load validation and training data................")
 file_path = ".//npy/"
-parameter_number = 215
+parameter_number = 50
 total_file = 81
 
-timeseries_length = 215
+timeseries_length = 50
 data = np.zeros(
     (total_file, timeseries_length, parameter_number), dtype=np.float32)
 genre_list =get_labels()

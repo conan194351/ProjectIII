@@ -15,9 +15,9 @@ import scipy.io.wavfile as wf
 import json
 import shutil
 
-parameter_number = 215
+parameter_number = 50
 # total_file = 100 # Number of Test Files
-timeseries_length = 215
+timeseries_length = 50
 num_mel = parameter_number
 data = np.zeros(
     (timeseries_length, parameter_number), dtype=np.float32)
