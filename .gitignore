@@ -1,4 +1,4 @@
 UsingCNN/npy
 UsingCNN/npy_label.csv
-UsingCNN/VOICE*.csv
+UsingCNN/IMAGE*.csv
 UsingSVM/model.sav
