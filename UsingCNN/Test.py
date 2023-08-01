@@ -79,8 +79,8 @@ model_name = "CNN_8575"
 
 
 
-img_rows = 50 #  1024 #512
-img_cols = 50 # 128 #256
+img_rows = 215 #  1024 #512
+img_cols = 215 # 128 #256
 print ("Loading Data from CNN project.....")
 
 def one_hot(Y_genre_strings):
@@ -96,10 +96,10 @@ genre = valid_csv["id"]
 # in itertools.cycle(a)
 print ("Loading test data---------------------")
 file_path = "./npy/"
-parameter_number = 50
+parameter_number = 215
 total_file = 1600 # Number of Test Files
 # NFFT = 4096
-timeseries_length = 50
+timeseries_length = 215
 data = np.zeros(
     (total_file, timeseries_length, parameter_number), dtype=np.float32)
 target = []
@@ -111,7 +111,7 @@ for filename in enumerate(file_name):
       break
 
     data[i]   = np.load(full_name)
-    if(data[i].shape !=(50,50)):
+    if(data[i].shape !=(215,215)):
         print(data[i].shape,path)
         exit(0)
     target.append(genre[index])

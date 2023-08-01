@@ -67,8 +67,8 @@ batch_size = 8
 
 num_epochs = 400
 
-img_rows = 50
-img_cols = 50 
+img_rows = 215
+img_cols = 215
 
 
 
@@ -109,10 +109,10 @@ data_working_dir = "./" + fold +"/"
 
 print ("Load validation and training data................")
 file_path = ".//npy/"
-parameter_number = 50
+parameter_number = 215
 total_file = 200
 
-timeseries_length = 50
+timeseries_length = 215
 data = np.zeros(
     (total_file, timeseries_length, parameter_number), dtype=np.float32)
 genre_list =get_labels()
@@ -141,7 +141,7 @@ for filename in enumerate(file_name):
       break
 
     data[i]   = np.load(full_name)
-    if(data[i].shape !=(50,50)):
+    if(data[i].shape !=(215,215)):
         print(data[i].shape,path)
         exit(0)
     target.append(genre[index])
@@ -177,7 +177,7 @@ for filename in enumerate(file_name):
     # target.append(genre[index])
     # i = i + 1
     data_train[i, :, 0:parameter_number]   = np.load(full_name)
-    if(data_train[i].shape !=(50,50)):
+    if(data_train[i].shape !=(215,215)):
         print(data[i].shape,path)
         exit(0)
     target.append(genre[index])
