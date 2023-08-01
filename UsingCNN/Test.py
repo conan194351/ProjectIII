@@ -97,7 +97,7 @@ genre = valid_csv["id"]
 print ("Loading test data---------------------")
 file_path = "./npy/"
 parameter_number = 215
-total_file = 1600 # Number of Test Files
+total_file = 652 # Number of Test Files
 # NFFT = 4096
 timeseries_length = 215
 data = np.zeros(
