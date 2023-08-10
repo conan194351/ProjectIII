@@ -1,0 +1,66 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ bn_0_freq (BatchNormalizati  (None, 50, 50, 1)        200       
+ on)                                                             
+                                                                 
+ conv1 (Conv2D)              (None, 50, 50, 64)        640       
+                                                                 
+ bn1 (BatchNormalization)    (None, 50, 50, 64)        256       
+                                                                 
+ elu (ELU)                   (None, 50, 50, 64)        0         
+                                                                 
+ pool1 (MaxPooling2D)        (None, 25, 25, 64)        0         
+                                                                 
+ dropout (Dropout)           (None, 25, 25, 64)        0         
+                                                                 
+ conv2 (Conv2D)              (None, 25, 25, 128)       73856     
+                                                                 
+ bn2 (BatchNormalization)    (None, 25, 25, 128)       512       
+                                                                 
+ elu_1 (ELU)                 (None, 25, 25, 128)       0         
+                                                                 
+ pool2 (MaxPooling2D)        (None, 12, 12, 128)       0         
+                                                                 
+ dropout_1 (Dropout)         (None, 12, 12, 128)       0         
+                                                                 
+ conv3 (Conv2D)              (None, 12, 12, 128)       147584    
+                                                                 
+ bn3 (BatchNormalization)    (None, 12, 12, 128)       512       
+                                                                 
+ elu_2 (ELU)                 (None, 12, 12, 128)       0         
+                                                                 
+ pool3 (MaxPooling2D)        (None, 6, 6, 128)         0         
+                                                                 
+ dropout_2 (Dropout)         (None, 6, 6, 128)         0         
+                                                                 
+ conv4 (Conv2D)              (None, 6, 6, 128)         147584    
+                                                                 
+ bn4 (BatchNormalization)    (None, 6, 6, 128)         512       
+                                                                 
+ elu_3 (ELU)                 (None, 6, 6, 128)         0         
+                                                                 
+ pool4 (MaxPooling2D)        (None, 2, 2, 128)         0         
+                                                                 
+ dropout_3 (Dropout)         (None, 2, 2, 128)         0         
+                                                                 
+ conv5 (Conv2D)              (None, 2, 2, 64)          73792     
+                                                                 
+ bn5 (BatchNormalization)    (None, 2, 2, 64)          256       
+                                                                 
+ elu_4 (ELU)                 (None, 2, 2, 64)          0         
+                                                                 
+ pool5 (MaxPooling2D)        (None, 1, 1, 64)          0         
+                                                                 
+ dropout_4 (Dropout)         (None, 1, 1, 64)          0         
+                                                                 
+ flatten (Flatten)           (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 2)                 130       
+                                                                 
+=================================================================
+Total params: 445,834
+Trainable params: 444,710
+Non-trainable params: 1,124
+_________________________________________________________________

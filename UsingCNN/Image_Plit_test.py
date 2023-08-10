@@ -2,18 +2,7 @@ from sklearn.model_selection import StratifiedKFold
 import pandas as pd
 from sklearn.model_selection import cross_validate
 
-genre_list = [
-    "dvh",
-    "hd"
-    "hienho",
-    "mytam",
-    "trungquan",
-    "vu"]
 col_list = ["file_id", "id"]
-
-
-train_ratio = 0.8   # Train and Valid
-valid_ratio = 0.1    # Testing
 
 
 # For all classes
